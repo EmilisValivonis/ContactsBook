@@ -9,7 +9,7 @@ using ContactBook.Models;
 namespace ContactBook.DataAccess
 {
     public class DataAccessLayer {
-        string filePath = @"C:\Users\Hackerman\source\repos\ContactBook\procedures.sql";
+        string filePath = @"C:\Users\Hackerman\source\repos\ContactBook\ContactBook\SQL\procedures.sql";
         private string connectionString;
 
         public DataAccessLayer(string connectionString) {
