@@ -9,7 +9,7 @@ using ContactBook.Models;
 namespace ContactBook.DataAccess
 {
     public class DataAccessLayer {
-        string filePath = @"C:\Users\Hackerman\source\repos\ContactBook\ContactBook\SQL\procedures.sql";
+        string procedures = @"C:\Users\Hackerman\source\repos\ContactBook\ContactBook\SQL\procedures.sql";
         private string connectionString;
 
         public DataAccessLayer(string connectionString) {
@@ -53,7 +53,7 @@ namespace ContactBook.DataAccess
             List<ContactModel> contacts = new List<ContactModel>();
 
             try {
-                string sqlScript = File.ReadAllText(filePath);
+                string sqlScript = File.ReadAllText(procedures);
                 string[] sqlStatements = sqlScript.Split(new[] { "GO" }, StringSplitOptions.RemoveEmptyEntries);
 
                 using (SqlConnection connection = new SqlConnection(connectionString)) {
